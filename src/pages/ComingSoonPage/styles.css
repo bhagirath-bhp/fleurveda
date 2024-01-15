@@ -1,0 +1,201 @@
+html {
+    scroll-snap-type: y mandatory;
+}
+
+.cs {
+    color: white;
+    max-width: 100vw;
+    font-size: 20px;
+}
+
+.cs-section {
+    block-size: 100%;
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
+}
+
+.cs-first-section {
+    min-height: 100vh;
+}
+
+#bg-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+    z-index: -1;
+}
+
+.cs-first-video-section {
+    min-height: 90vh;
+    width: 100%;
+    overflow: hidden;
+    background: url("/fleurveda.cs.mp4");
+    position: relative;
+}
+
+.cs-first-bottom-section {
+    width: 100%;
+    min-height: 10vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    bottom: 0;
+    font-weight: 500;
+    word-wrap: break-word;
+    background-color: #000;
+    box-shadow: 0px -50px 50px 50px rgba(0, 0, 0, 1);
+}
+
+.scroll-icon-section {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    bottom: 1rem;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+
+.cs-second-section {
+    position: relative;
+    font-size: 20px;
+    min-height: 100vh;
+    overflow: hidden;
+    background-color: burlywood;
+    background: url("/lotus.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+}
+
+.cs-second-section h4 {
+    color: #C94726;
+}
+
+.cs-second-top-section {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.cs-pattern-1,
+.cs-pattern-2 {
+    position: absolute;
+    width: 10%;
+}
+
+.cs-pattern-1 {
+    right: 0;
+}
+
+.cs-pattern-2 {
+    left: 0;
+    transform: scaleX(-1);
+}
+
+.cs-second-section-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.content-textual {
+    text-align: center;
+    margin: 4rem 0;
+    margin-top: 10rem;
+}
+
+.content-functional {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: rgba(0, 0, 0, 0.05);
+    padding: 2rem;
+    width: 60%;
+}
+
+.content-functional input {
+    padding: .5rem 1rem;
+    max-height: 1.3rem;
+    margin: 1rem;
+    outline: none;
+}
+.content-functional button {
+    background-color: #C94726;
+    outline: none;
+    border: none;
+    padding: .5rem 1rem;
+    color: white;
+    font-family: Luxia;
+    margin: 1rem;
+    border-radius: 5px;
+}
+
+@media only screen and (min-width: 300px) {
+    .cs {
+        font-size: 10px;
+    }
+    .cs-first-bottom-section{
+        gap: 15rem;
+    }
+    .cs-second-top-section {
+        top: 1.5rem;
+    }
+    .content-textual{
+        max-width: 70%;
+    }
+    .content-functional button {
+        width: 100%;
+        margin: 1rem 0;
+    }
+    .content-functional input {
+        width: 80%;
+        margin: 1rem 0;
+    }
+}
+
+@media only screen and (min-width: 600px) {
+    .cs{
+        font-size: 18px;
+    }
+    .content-functional input {
+        width: 20rem;
+        margin: 1rem;
+    }
+    .content-textual{
+        max-width: 50%;
+    }
+    .cs-first-bottom-section{
+        justify-content: space-between;
+    }
+    .content-functional button {
+        width: 40%;
+    }
+
+    .newsletter-area {
+        display: flex;
+    }
+}
+
+@media only screen and (min-width: 800px) {
+    .cs-second-top-section {
+        top: 2.5rem;
+    }
+}
+
