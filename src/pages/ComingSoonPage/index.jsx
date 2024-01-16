@@ -3,30 +3,33 @@ import video from '/fleurveda.cs.mp4'
 import "./styles.css"
 
 const ComingSoonPage = () => {
+    const el = (<video src={video} autoPlay muted loop id="bg-video" type="video/mov"></video>);
+    console.log(el)
     return (
         <main className="cs">
-            <section className="cs-first-section cs-section">
+            <section className="cs-first-section cs-section" id="cs-first-section">
                 <section className="cs-first-video-section">
-                    <video src={video} autoPlay muted loop id="bg-video"></video>
+                    <video src={video} autoPlay muted loop id="bg-video" type="video/mp4"></video>
+                    {/* <video src="https://drive.google.com/file/d/1LcnrH5Hse5PhKNeisEWF6YgP_OUKQXkq/view?usp=sharing" autoPlay muted loop id="bg-video" type="video/mov"></video> */}
                 </section>
                 <section className="cs-first-bottom-section">
                     <span>All rights reserved &#169;</span>
-                    <span className="scroll-icon-section">
+                    <a href="#cs-second-section" className="scroll-icon-section pseudobtn">
                         <MdKeyboardDoubleArrowUp />
                         <p>Show more</p>
-                    </span>
+                    </a>
                     <span>
                         <p>Fleurveda is Going Live Soon . . .</p>
                     </span>
                 </section>
             </section>
-            <section className="cs-second-section cs-section">
+            <section className="cs-second-section cs-section" id="cs-second-section">
                 <img src="/pattern.1.png" alt="pattern1" className="cs-pattern-2"/>
                 <img src="/pattern.1.png" alt="pattern1" className="cs-pattern-1"/>
-                <span className="cs-second-top-section">
+                <a href="#cs-first-section" className="cs-second-top-section pseudobtn">
                         <MdKeyboardDoubleArrowDown />
                         <p>Show Less</p>
-                </span>
+                </a>
                 <section className="cs-second-section-content">
                     <div className="content-textual">
                         <h4>FLEURVEDA</h4>
